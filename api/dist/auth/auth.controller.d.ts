@@ -5,13 +5,19 @@ export declare class AuthController {
     private readonly authService;
     constructor(authService: AuthService);
     signUp(signUpDto: SignUpDto): Promise<{
-        id: string;
-        name: string;
-        email: string;
+        user: {
+            id: string;
+            name: string;
+            email: string;
+        };
+        token: string;
     }>;
     signIn(signInDto: SignInDto): Promise<{
-        id: string;
-        name: string;
-        email: string;
+        user: {
+            id: string;
+            name: string;
+            email: string;
+        };
+        token: string;
     }>;
 }
