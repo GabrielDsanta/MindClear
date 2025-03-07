@@ -53,6 +53,8 @@ npx prisma migrate dev
 
 # Iniciar o servidor de desenvolvimento
 npm run start:dev
+
+Comando completo: sudo docker compose up -d && npx prisma migrate dev && npm run start:dev
 ```
 5. Iniciar o Aplicativo Mobile
 ```
@@ -62,5 +64,26 @@ npx expo run:ios
 Para Android:
 npx expo run:android
 ```
+# Decisões Técnicas
+Aqui estão as principais decisões técnicas do projeto, com explicações breves:
 
+### 1. LocalStorage para Dados de Contabilidade
+Decisão: Dados de dias de sobriedade são salvos no LocalStorage.
+
+Justificativa: Simples e eficiente para persistir dados no cliente, mantendo a experiência do usuário fluida.
+
+### 2. JWT no NestJS para Autenticação
+Decisão: Autenticação implementada com JWT, integrado ao NestJS.
+
+Justificativa: Seguro, stateless e de fácil implementação, com suporte nativo do framework.
+
+### 3. Docker para Banco de Dados
+Decisão: Uso do Docker para inicializar o PostgreSQL.
+
+Justificativa: Configuração rápida e consistente, com ambiente isolado e reproduzível.
+
+### 4. Hooks Personalizados e useCallback
+Decisão: Hooks personalizados para integração com a API e useCallback para otimização.
+
+Justificativa: Reutilização de código e melhoria de desempenho, evitando recriação desnecessária de funções.
 
