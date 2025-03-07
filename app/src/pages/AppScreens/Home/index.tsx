@@ -2,7 +2,7 @@ import React, { FC, useState, useEffect } from "react";
 import { TitledContainer } from "components/TitledContainer";
 import { useNavigation } from "@react-navigation/native";
 import { AppNavigationRoutesProps } from "..";
-import { ImageBackground, Text, View, TouchableOpacity, StyleSheet, Image, Dimensions } from "react-native";
+import { ImageBackground, Text, View, TouchableOpacity, StyleSheet, Image, Dimensions, ScrollView } from "react-native";
 import { Button } from "components/Button";
 import { TriangleAlert, Hand, Clock, RefreshCw } from "lucide-react-native";
 import { LinearGradient } from "expo-linear-gradient";
@@ -98,7 +98,7 @@ export const Home: FC = () => {
   );
 
   const renderProgressBar = (label: string, progress: string, widthPercentage: string) => {
-    const screenWidth = Dimensions.get('window').width;
+    const screenWidth = Dimensions.get("window").width;
     const width = (parseFloat(widthPercentage) / 100) * screenWidth * 0.85; // 85% do tamanho do container
 
     return (
@@ -116,29 +116,33 @@ export const Home: FC = () => {
 
   return (
     <TitledContainer disableArrow>
-      <ImageBackground style={{ flex: 1 }} source={require("../../../assets/BackgroundPNG.png")}>
-        <View style={styles.container}>
-          {renderProfileImage()}
-          {renderSobrietyTimer()}
+      <ScrollView style={{ flex: 1 }}>
+        <ImageBackground style={{ flex: 1 }} source={require("../../../assets/BackgroundPNG.png")}>
+          <View style={styles.container}>
+            {renderProfileImage()}
+            {renderSobrietyTimer()}
 
-          <View style={styles.buttonsContainer}>
-            {renderActionButton(<Hand color="white" size={20} />, "Promessa", () => navigation.navigate("Commitment"))}
-            {renderActionButton(<Clock color="white" size={20} />, "Meditar", () => navigation.navigate("Meditate"))}
-            {renderActionButton(<RefreshCw color="white" size={20} />, "Resetar", resetSobrietyCounter)}
+            <View style={styles.buttonsContainer}>
+              {renderActionButton(<Hand color="white" size={20} />, "Promessa", () => navigation.navigate("Commitment"))}
+              {renderActionButton(<Clock color="white" size={20} />, "Meditar", () => navigation.navigate("Meditate"))}
+              {renderActionButton(<RefreshCw color="white" size={20} />, "Resetar", resetSobrietyCounter)}
+            </View>
+
+            {renderProgressBar("Recuperação Cerebral", brainRecoveryProgress, brainRecoveryProgress)}
+            {renderProgressBar("Desafio 28 dias", challengeProgress, challengeProgress)}
+
+            <Button
+              onPress={() => navigation.navigate("PanicPage")}
+              title="Botão de Pânico"
+              backgroundColor="#DC2626"
+              iconPosition="left"
+              icon={<TriangleAlert size={24} color="white" />}
+            />
           </View>
 
-          {renderProgressBar("Recuperação Cerebral", brainRecoveryProgress, brainRecoveryProgress)}
-          {renderProgressBar("Desafio 28 dias", challengeProgress, challengeProgress)}
-
-          <Button
-            onPress={() => navigation.navigate("PanicPage")}
-            title="Botão de Pânico"
-            backgroundColor="#DC2626"
-            iconPosition="left"
-            icon={<TriangleAlert size={24} color="white" />}
-          />
-        </View>
-      </ImageBackground>
+          <View style={{ paddingBottom: 100 }}></View>
+        </ImageBackground>
+      </ScrollView>
     </TitledContainer>
   );
 };
@@ -147,7 +151,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    padding: 20,
+    padding: 20
   },
   containerImage: {
     borderWidth: 2,
@@ -158,17 +162,17 @@ const styles = StyleSheet.create({
     alignItems: "center",
     borderColor: "#33AFFF",
     marginBottom: 20,
-    marginTop: -30,
+    marginTop: -20
   },
   title: {
     ...fonts.regularFont,
     fontSize: 14,
     color: "#9CA3AF",
-    marginBottom: 5,
+    marginBottom: 5
   },
   timer: {
     ...fonts.boldFont,
-    fontSize: 36,
+    fontSize: 36
   },
   subTimerContainer: {
     height: 35,
@@ -178,18 +182,17 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     marginBottom: 20,
-    marginTop: 10,
+    marginTop: 10
   },
   subTimer: {
     ...fonts.regularFont,
-    fontSize: 16,
+    fontSize: 16
   },
   buttonsContainer: {
     width: "100%",
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "space-around",
-    marginBottom: 15,
+    justifyContent: "space-around"
   },
   actionsContainer: {
     width: 45,
@@ -197,11 +200,11 @@ const styles = StyleSheet.create({
     borderRadius: 1000,
     justifyContent: "center",
     alignItems: "center",
-    marginBottom: 8,
+    marginBottom: 8
   },
   alignContainer: {
     justifyContent: "center",
-    alignItems: "center",
+    alignItems: "center"
   },
   progressBarContainer: {
     width: "100%",
@@ -210,15 +213,15 @@ const styles = StyleSheet.create({
     backgroundColor: "#030716",
     padding: 8,
     justifyContent: "center",
-    marginTop: 10,
+    marginTop: 10
   },
   progressBarText: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    marginBottom: 15,
+    marginBottom: 15
   },
   fontRegular: {
-    ...fonts.regularFont,
-  },
+    ...fonts.regularFont
+  }
 });

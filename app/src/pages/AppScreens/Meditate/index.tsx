@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 
 import { ChevronLeft } from "lucide-react-native";
-import { Dimensions, ImageBackground, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Dimensions, ImageBackground, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { LinearGradient } from "expo-linear-gradient";
 import { MeditateCard } from "./components";
@@ -28,7 +28,8 @@ export const Meditate: FC = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <ImageBackground style={styles.imageBackgroundContainer} source={require("../../../assets/BackgroundPNG.png")}>
+     <ScrollView style={{ flex: 1 }}>
+     <ImageBackground style={styles.imageBackgroundContainer} source={require("../../../assets/BackgroundPNG.png")}>
         <View style={styles.containerHeader}>
           <TouchableOpacity onPress={() => navigation.navigate("Home")} style={styles.headerBackButtonContainer}>
             <ChevronLeft color="white" size={20} />
@@ -51,7 +52,10 @@ export const Meditate: FC = () => {
             <Text style={[styles.fontBold]}>Finalizar reflexão</Text>
           </TouchableOpacity>
         </LinearGradient>
+
+        <View style={{ paddingBottom: 150 }}></View>
       </ImageBackground>
+     </ScrollView>
     </SafeAreaView>
   );
 };

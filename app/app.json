@@ -2,11 +2,9 @@
   "expo": {
     "name": "MindClear",
     "slug": "mind-clear_app",
-    "icon": "./images/icon-app-512-512.png",
     "version": "1.6.2",
     "runtimeVersion": "1.0.0",
     "splash": {
-      "image": "./images/mind-clear-splash-dispositivos.png",
       "backgroundColor": "#000000",
       "resizeMode": "cover"
     },
@@ -19,7 +17,6 @@
     "android": {
       "permissions": ["CAMERA"],
       "adaptiveIcon": {
-        "foregroundImage": "./images/icon-app-512-1.png",
         "backgroundColor": "#FFFFFF",
         "resizeMode": "contain"
       },

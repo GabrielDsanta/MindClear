@@ -111,7 +111,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     borderWidth: 1,
     borderColor: "white",
-    marginTop: height * 0.6,
+    marginTop: height * 0.55,
   },
   regularFont: {
     ...fonts.regularFont,
@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     backgroundColor: "#FFD700",
     position: "absolute",
-    marginTop: 160,
+    marginTop: 120,
     shadowColor: "#FFD700",
     shadowOffset: {
       width: 0,
