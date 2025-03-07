@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 
 import { ChevronLeft, CircleCheck, CircleHelp, Crown, Hand } from "lucide-react-native";
-import { Dimensions, ImageBackground, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Dimensions, ImageBackground, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { LinearGradient } from "expo-linear-gradient";
 import { CommitMentCard } from "./components/CommitmentCard";
@@ -85,22 +85,29 @@ export const Commitment: FC = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <ImageBackground style={styles.imageBackgroundContainer} source={require("../../../assets/BackgroundPNG.png")}>
-        {renderHeader()}
+      
+      <ScrollView style={{ flex: 1 }}>
+        
+        <ImageBackground style={styles.imageBackgroundContainer} source={require("../../../assets/BackgroundPNG.png")}>
+          {renderHeader()}
 
-        <LinearGradient colors={["#3589EC", "#2B4ED4"]} style={styles.handContainer} start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }}>
-          <Hand color="white" size={52} />
-        </LinearGradient>
+          <LinearGradient colors={["#3589EC", "#2B4ED4"]} style={styles.handContainer} start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }}>
+            <Hand color="white" size={52} />
+          </LinearGradient>
 
-        <Text style={[styles.fontBold, { fontSize: 24, textAlign: "center", width: 280, marginBottom: 15 }]}>Comprometa-se com a Sobriedade Hoje</Text>
-        <Text style={styles.commitmentText}>
-          Faça um compromisso consigo mesmo para não se masturbar hoje. Você receberá uma notificação em 24 horas para acompanhar seu progresso.
-        </Text>
+          <Text style={[styles.fontBold, { fontSize: 24, textAlign: "center", width: 280, marginBottom: 15 }]}>Comprometa-se com a Sobriedade Hoje</Text>
+          <Text style={styles.commitmentText}>
+            Faça um compromisso consigo mesmo para não se masturbar hoje. Você receberá uma notificação em 24 horas para acompanhar seu progresso.
+          </Text>
 
-        {renderCommitmentCards()}
-        {renderCommitmentButton()}
-        <Toast position="top" topOffset={30} />
-      </ImageBackground>
+          {renderCommitmentCards()}
+          {renderCommitmentButton()}
+          <Toast position="top" topOffset={30} />
+
+          <View style={{ paddingBottom: 150 }}></View>
+       
+        </ImageBackground>
+      </ScrollView>
     </SafeAreaView>
   );
 };
@@ -153,7 +160,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     justifyContent: "center",
     alignItems: "center",
-    marginTop: height * 0.1
+    marginTop: 25
   },
   fontBold: {
     ...fonts.boldFont
