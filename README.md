@@ -24,11 +24,11 @@ cd seu-projeto
 
 ```
 # No diretório do backend
-cd backend
+cd api
 npm install
 
 # No diretório do aplicativo mobile
-cd ../mobile
+cd app
 yarn install
 ```
 
