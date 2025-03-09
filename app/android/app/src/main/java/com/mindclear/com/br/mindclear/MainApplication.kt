@@ -1,4 +1,4 @@
-package com.boraup.com.br.boraup
+package com.mindclear.com.br.mindclear
 
 import android.app.Application
 import android.content.res.Configuration

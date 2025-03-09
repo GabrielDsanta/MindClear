@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "BoraUp.app"
-               BlueprintName = "BoraUp"
-               ReferencedContainer = "container:BoraUp.xcodeproj">
+               BuildableName = "MindClear.app"
+               BlueprintName = "MindClear"
+               ReferencedContainer = "container:MindClear.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "BoraUpTests.xctest"
-               BlueprintName = "BoraUpTests"
-               ReferencedContainer = "container:BoraUp.xcodeproj">
+               BuildableName = "MindClearTests.xctest"
+               BlueprintName = "MindClearTests"
+               ReferencedContainer = "container:MindClear.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "BoraUp.app"
-            BlueprintName = "BoraUp"
-            ReferencedContainer = "container:BoraUp.xcodeproj">
+            BuildableName = "MindClear.app"
+            BlueprintName = "MindClear"
+            ReferencedContainer = "container:MindClear.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "BoraUp.app"
-            BlueprintName = "BoraUp"
-            ReferencedContainer = "container:BoraUp.xcodeproj">
+            BuildableName = "MindClear.app"
+            BlueprintName = "MindClear"
+            ReferencedContainer = "container:MindClear.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
