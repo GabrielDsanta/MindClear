@@ -1,4 +1,4 @@
-package com.boraup.com.br.boraup
+package com.mindclear.com.br.mindclear
 import expo.modules.splashscreen.SplashScreenManager
 
 import android.os.Build
