@@ -3,7 +3,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import { Dimensions, ImageBackground, StyleSheet, Text, TouchableOpacity, Animated } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useNavigation } from "@react-navigation/native";
-import { AppNavigationRoutesProps } from "..";
+import { AppNavigationRoutesProps } from ".";
 
 import fonts from "styles/fonts";
 import colors from "styles/colors";

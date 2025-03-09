@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { CommitmentCard } from "..";
+import { CommitmentCard } from "../Commitment";
 import { StyleSheet, Text, View } from "react-native";
 
 import fonts from "styles/fonts";
