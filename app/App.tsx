@@ -33,8 +33,6 @@ import {
 import configureStore from "./src/redux/store/configureStore";
 import Routes from "./src/routes/Routes";
 
-// const oneSignalAppId = Platform.OS === "ios" ? "d405c684-f901-4b84-abe5-066fe014bcc5" : "9f9b5d18-ee11-4e14-87e6-780e1a753810";
-
 const queryClient = new QueryClient();
 
 const store = configureStore();
@@ -49,12 +47,6 @@ export default function App() {
   if (!fontsLoadedPoppins) {
     return <View />;
   }
-
-  // OneSignal.initialize(oneSignalAppId);
-  // OneSignal.Notifications.requestPermission(true);
-  // OneSignal.Notifications.addEventListener("click", async (event) => {
-  //   playCoinsSound();
-  // });
 
   return (
     <Provider store={store}>

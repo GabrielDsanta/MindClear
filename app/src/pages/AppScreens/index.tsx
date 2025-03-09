@@ -5,10 +5,10 @@ import { Host } from "react-native-portalize";
 import { StyleSheet, Text, View } from "react-native";
 import { Home } from "./Home";
 import { House, Settings } from "lucide-react-native";
-import { PanicPage } from "./PanicPage";
+import { PanicPage } from "./PanicPage/PanicPage";
 import { Options } from "./Options";
-import { Commitment } from "./Commitment";
-import { Meditate } from "./Meditate";
+import { Commitment } from "./Commitment/Commitment";
+import { Meditate } from "./Meditate/Meditate";
 import { BreathingExercise } from "./BreathingExercise";
 
 import colors from "styles/colors";

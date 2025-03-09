@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { StyleSheet, Text, View } from "react-native";
-import { OptionCard } from "..";
+import { OptionCard } from "../PanicPage";
 import fonts from "styles/fonts";
 
 interface PanicCardProps {

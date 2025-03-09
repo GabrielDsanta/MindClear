@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 
 import { ChevronLeft, CircleCheck, CircleHelp, Crown, Hand } from "lucide-react-native";
-import { Dimensions, ImageBackground, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { ImageBackground, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { LinearGradient } from "expo-linear-gradient";
 import { CommitMentCard } from "./components/CommitmentCard";
@@ -12,8 +12,6 @@ import colors from "styles/colors";
 import fonts from "styles/fonts";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import Toast from "react-native-toast-message";
-
-const { height } = Dimensions.get("screen");
 
 export interface CommitmentCard {
   id: number;

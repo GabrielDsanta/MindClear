@@ -1,7 +1,7 @@
 import React, { FC, useState, useEffect } from "react";
 import { TitledContainer } from "components/TitledContainer";
 import { useNavigation } from "@react-navigation/native";
-import { AppNavigationRoutesProps } from "..";
+import { AppNavigationRoutesProps } from ".";
 import { ImageBackground, Text, View, TouchableOpacity, StyleSheet, Image, Dimensions, ScrollView } from "react-native";
 import { Button } from "components/Button";
 import { TriangleAlert, Hand, Clock, RefreshCw } from "lucide-react-native";
