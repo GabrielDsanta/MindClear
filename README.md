@@ -28,7 +28,7 @@ cd api
 npm install
 
 # No diretório do aplicativo mobile
-cd app
+cd mobile
 yarn install
 ```
 

@@ -81,11 +81,18 @@ export const PanicPage = () => {
             visibilityTime: 2500
           });
           return;
+        } else {
+          await AsyncStorage.removeItem("sobrietyStartTime");
+          router.push("Home");
         }
+      } else {
+        Toast.show({
+          type: "error",
+          text1: "O contador ainda não foi iniciado.",
+          visibilityTime: 2500
+        });
+        return;
       }
-
-      await AsyncStorage.removeItem("sobrietyStartTime");
-      router.push("Home");
     } catch (error) {
       console.error("Erro ao resetar o contador de sobriedade:", error);
     }
@@ -100,7 +107,8 @@ export const PanicPage = () => {
 
   return (
     <TitledContainer handleGoBack={() => router.back()}>
-      <Toast position="top" topOffset={80} />
+      <Toast position="top" topOffset={50} />
+
       <ScrollView showsVerticalScrollIndicator={false} style={{ flex: 1 }}>
         <ImageBackground style={styles.container} source={require("../src/assets/BackgroundPNG.png")}>
           <View style={styles.panicMessageContainer}>
@@ -189,7 +197,7 @@ const styles = StyleSheet.create({
     borderRadius: 100000,
     height: 40,
     justifyContent: "center",
-    alignItems: "center",
+    alignItems: "center"
   },
   panicMessageText: {
     ...fonts.semiBoldFont,
