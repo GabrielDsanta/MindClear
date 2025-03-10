@@ -1,0 +1,35 @@
+{
+  "expo": {
+    "name": "MindClear",
+    "slug": "mind-clear_app",
+    "version": "1.6.2",
+    "runtimeVersion": "1.0.0",
+    "splash": {
+      "backgroundColor": "#000000",
+      "resizeMode": "cover"
+    },
+    "platforms": ["ios", "android"],
+    "scheme": "your-app-scheme",
+    "newArchEnabled": true,
+    "extra": {
+      "eas": {
+        "projectId": "c02f28d5-8573-4d40-8375-1b6882dfee00"
+      }
+    },
+    "android": {
+      "permissions": ["CAMERA"],
+      "adaptiveIcon": {
+        "backgroundColor": "#FFFFFF",
+        "resizeMode": "contain"
+      },
+      "package": "com.mindclear.com.br.mindclear",
+      "versionCode": 34
+    },
+    "ios": {
+      "bundleIdentifier": "com.mindclear.com.br.mindclear",
+      "buildNumber": "2",
+      "runtimeVersion": "1.0.0"
+    },
+    "plugins": ["expo-router"]
+  }
+}
