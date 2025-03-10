@@ -59,10 +59,12 @@ Comando completo: sudo docker compose up -d && npx prisma migrate dev && npm run
 5. Iniciar o Aplicativo Mobile
 ```
 Para iOS:
-npx expo run:ios
+npx expo start
+Apertar letra i para abrir emulador
 
 Para Android:
-npx expo run:android
+npx expo start
+Apertar letra a para abrir emulador
 ```
 # Decisões Técnicas
 Aqui estão as principais decisões técnicas do projeto, com explicações breves:
